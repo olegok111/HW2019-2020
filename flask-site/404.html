@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Такой страницы нет...</title>
+		<link rel="stylesheet" href="./style.css" />
+		<style>
+		main {
+			font-size: 50px !important;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+		  <div class="mysite text">
+			Flask-сайт
+		  </div>
+		  <div class="greeting">
+			<div>
+			  html
+			</div>
+			<div>
+			  flask
+			</div>
+			<div>
+			  python
+			</div>
+		  </div>
+		</header>
+		<main id="text">
+			<span id="warning"></span>
+			<span id="post-warning"></span>
+			<script type="text/javascript">
+			function getRandomInt(min, max)
+			{
+			  return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var warningId = getRandomInt(0, 2);
+			var enter = '\n';
+			var w = 384;
+			if (warningId == 0) {
+				document.getElementById('warning').style = 'font-family: Lucida Sans Typewriter;';
+				w = '...<br>402<br>403<br>404 &lt;&lt;&lt;<br>405<br>406<br>...<br>';
+				document.getElementById('warning').innerHTML = w;
+				document.getElementById('post-warning').innerHTML = 'Такой страницы нет. Проверьте введённый адрес.';
+			} else if (warningId == 1){
+				document.getElementById('warning').style = 'font-family: Lucida Sans Typewriter;';
+				w = '<pre>\
+	#  #  #### #  #\n\
+	####  #  # ####\n\
+	   #  #  #    #\n\
+	   #  ####    #\n</pre>';
+				document.getElementById('warning').innerHTML = w;
+				document.getElementById('post-warning').innerHTML = 'Такой страницы нет. Проверьте введённый адрес.';
+			} else {
+				setInterval(
+				function () {
+					if (w < 404) {
+						w++;
+						document.getElementById('warning').innerHTML = '<br><br>Код ' + w + '. Такой страницы нет.';
+					}
+				}, 25);
+			}
+			
+			</script>
+		</main>
+		<footer>
+			<a href="http://nond.pythonanywhere.com/">&lt;&lt;&lt; Обратно</a>
+			<a href="http://nond.pythonanywhere.com/time">Страница с часами</a>
+			<a href="./index.html">index.html</a>
+			<a href="./time.html">time.html</a>
+		</footer>
+	</body>
+</html>

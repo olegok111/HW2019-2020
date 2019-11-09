@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Часы</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header>
+		  <div class="mysite text">
+			Flask-сайт
+		  </div>
+		  <div class="greeting">
+			<div>
+			  html
+			</div>
+			<div>
+			  flask
+			</div>
+			<div>
+			  python
+			</div>
+		  </div>
+		</header>
+		<main>
+			<script type="text/javascript">  
+			setInterval(function () {  
+			 date = new Date(),  
+			 h = date.getHours(),  
+			 m = date.getMinutes(),  
+			 s = date.getSeconds(),  
+			 h = (h < 10) ? '0' + h : h,  
+			 m = (m < 10) ? '0' + m : m,  
+			 s = (s < 10) ? '0' + s : s,  
+			 document.getElementById('time').innerHTML = h + ':' + m + ':' + s;  
+			}, 1000);
+			</script>
+			<h1>Московское* время</h1>
+			<span id="time" position="center">00:00:00</span>
+		</main>
+		<footer>
+			*указано время, установленное на компьютере. Скорее всего московское
+			<br>
+			<a href="http://nond.pythonanywhere.com/">&lt;&lt;&lt; Обратно</a>
+			<a href="http://nond.pythonanywhere.com/404">Страница 404</a>
+			<a href="./index.html">index.html</a>
+			<a href="./404.html">404.html</a>
+		</footer>
+	</body>
+</html>
