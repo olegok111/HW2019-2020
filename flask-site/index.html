@@ -3,10 +3,90 @@
   <head>
     <title>Hello!</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./style.css" />
+    <style>
+
+body {
+  display: grid;
+  grid-template: 100px 720px 100px/1fr;
+  font-family: helvetica;
+  font-size: 30px;
+  color: #002;
+  //background-color: cyan;
+}
+
+.text {
+  padding: 5px;
+}
+
+header {
+  display: grid;
+  grid-area: 1 / 1 / 2 / -1;
+  grid-template-rows: 2fr 1fr;
+  background-color: #00e694;
+}
+
+.mysite {
+  font-size: 50px;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 20px;
+}
+
+.greeting div {
+  text-align: center;
+}
+
+main {
+  grid-area: 2 / 1 / 3 / -1;
+  display: grid;
+  color: #d0ffd0;
+  background-color: white;
+  grid-template: 1fr 1fr 1fr/2fr 5fr;
+}
+
+.photo {
+  grid-area: 1 / 1 / span 3 / 2;
+  color: black;
+  background-color: gray;
+}
+
+.info-1 {
+  grid-area: 1 / 2 / span 1 / span 1;
+  background-color: #004725;
+}
+
+.info-2 {
+  grid-area: 2 / 2 / span 1 / span 1;
+  background-color: #007a3f;
+}
+
+.info-3 {
+  grid-area: 3 / 2 / span 1 / span 1;
+  background-color: #004725;
+}
+
+.info-3 h3 {
+  text-align: center;
+}
+
+footer {
+  grid-area: 3 / 1 / 4 / -1;
+  padding: 5px;
+  font-size: 20px;
+  color: white;
+  background-color: #2a2a2a;
+}
+
+footer a {
+  color: #d4d4d4;
+}
+    </style>
   </head>
   <body>
-    <header>
+  <header>
       <div class="mysite text">
         Flask-сайт
       </div>
@@ -23,13 +103,36 @@
       </div>
     </header>
     <main>
-      2
+      <div class="photo">
+        <img src="" alt="&lt;нет фото&gt;"/>
+      </div>
+      <div class="info-1">
+        <ul>
+          <li>Как зовут: Олег Окоёмов</li>
+          <li>Сколько лет: 16</li>
+          <li>Когда день рождения: 29 января</li>
+          <li>Где живёт: г.Москва</li>
+        </ul>
+      </div>
+      <div class="info-2">
+        <ul>
+          <li>Чем занимается: учится в школе</li>
+          <li>Где учится: Школа №1329</li>
+        </ul>
+      </div>
+      <div class="info-3">
+        <h3>Информация о сайте:</h3>
+        <ul>
+          <li>Когда был создан: ноябрь 2019 г.</li>
+          <li>Какая версия: 1.0</li>
+          <li>Кто создал: вышеупомянутый автор</li>
+          <li>На чём написан: Flask + HTML</li>
+        </ul>
+      </div>
     </main>
     <footer>
-		<a href="http://nond.pythonanywhere.com/time">Страница с часами</a>
-		<a href="http://nond.pythonanywhere.com/404">Страница 404</a>
-		<a href="./time.html">time.html</a>
-		<a href="./404.html">404.html</a>
+		<a href="/time">Часы</a>
+		<a href="/abracadabra">Страница 404</a>
 	</footer>
   </body>
 </html>
