@@ -43,3 +43,4 @@ for i in range(10):
     print(f_list[i][0], f_list[i][1])
     if i == len(f_list) - 1:
         break
+# https://cloud.mail.ru/public/5qSr/5rsWSwiKG
